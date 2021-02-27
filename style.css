@@ -1,0 +1,82 @@
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    animation-name: sizeScale;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+/* 
+アニメーションプロパティの順番
+animation-name
+animation-duration
+
+animation-timing-function
+___
+(初期値)ease: 開始と終了が緩やか
+ease-in: 終了時が早い
+ease-out: 開始時が早い
+ease-in-out: 開始と終了がかなり緩やか
+linear: 一定
+step-start: 開始と同時に最終形態
+step-end: 終了と同時に最終形態
+steps(正数,[start/end]):指定した正数の段階で変化します。第2引数には start または end を指定できます。start を指定すると、アニメーション開始時から変化します。end を指定すると、アニメーション終了時に変化。
+___
+
+animation-delay
+animation-iteration-count
+
+animation-direction
+(normal/reverse/alternate/alternate-reverse)
+
+animation-fill-mode
+(アニメーションの開始前、終了後のスタイルを指定できるプロパティ、初期値はnone)
+
+animation-play-state
+*/
+
+.stop {
+    animation-play-state: paused;
+}
+
+#btn {
+    margin-top: 30px;
+    background-color: aliceblue;
+    color: blueviolet;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+    outline: none;
+}
+
+@keyframes sizeScale {
+    0% {
+        width:100px;
+    }
+    100% {
+        width:600px;
+    }
+}
+/* 上と同じ
+@keyframes sizeScale {
+    from {
+        width:200px;
+    }
+    to {
+        width:300px;
+    }
+} */
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}

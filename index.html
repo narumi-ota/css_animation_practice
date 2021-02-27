@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="target" class="box stop"></div>
+
+    <button id="btn">開始</button>
+
+<script>
+'use strict';
+
+const btn = document.getElementById('btn');
+const box = document.getElementById('target');
+
+btn.addEventListener('click',()=>{
+    var btntext = btn.innerText; 
+    
+    if(btntext === "開始"){
+        btn.innerText = "停止";
+    } else {
+        btn.innerText = "開始";
+    }
+    box.classList.toggle('stop');
+});
+
+</script>
+</body>
+</html>
